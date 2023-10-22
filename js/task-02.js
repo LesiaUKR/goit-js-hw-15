@@ -1,13 +1,13 @@
 const input = document.querySelector("#font-size-control");
-console.log(input);
 
 const span = document.querySelector("#text");
-console.log(span);
 
-input.addEventListener("input", handlerSpanSizeText);
+span.style.fontSize = input.value + "px";
 
-function handlerSpanSizeText() {
+input.addEventListener("input", handleSpanTextSizing);
+
+function handleSpanTextSizing() {
   const textSize = input.value;
-  console.log(textSize);
+
   span.style.fontSize = `${textSize}px`;
 }
